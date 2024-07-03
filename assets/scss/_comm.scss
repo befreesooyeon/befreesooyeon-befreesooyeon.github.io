@@ -1,0 +1,265 @@
+// 사이트의 공통 스타일을 정의합니다.
+// 헤더 및 푸터 부분
+// 버튼, 라디오 버튼, 체크박스
+// 카드디자인, 리스트 디자인
+// 공통 스타일을 정의
+
+// 공통
+.wrap {
+    height: 100%;
+    min-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+body {
+    background: $primary;
+}
+
+// body {
+//     background: url(../../pc.png) no-repeat 50% 0;
+//     .wrap {
+//         opacity: 0.7;
+//         transform: translateY(26px);
+//     }
+// }
+
+// header
+.header {
+    color: $black;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    padding: 24px 80px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: $primary;
+    // border-bottom: 0.5px solid #595959;
+}
+
+.nav_list {
+    display: flex;
+    font-size: 16px;
+    .nav_item {
+        margin-left: 46px;
+        :hover {
+            color: $secondary;
+        }
+    }
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+// nav about 클릭 시 해당 영역만 보이게
+#about {
+    min-height: 100vh; /* 최소 화면 높이만큼 설정 */
+}
+
+// Toggle
+.toggleSwitch {
+    width: 182px;
+    height: 85px;
+    position: absolute;
+    top: 140px; /* 위치 조정 */
+    left: 499px; /* 위치 조정 */
+    border-radius: 50px;
+    background-color: #d8d8d8;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.toggleButton {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #fff;
+}
+
+#toggle:checked ~ .toggleSwitch {
+    background: $secondary;
+}
+
+#toggle:checked ~ .toggleSwitch .toggleButton {
+    left: calc(100% - 70px);
+    background: #fff;
+}
+
+.toggleSwitch,
+.toggleButton {
+    transition: all 0.2s ease-in;
+}
+// 라인
+.line {
+    background: #c7c7c7;
+    width: 1280px;
+    height: 1px;
+    margin: auto;
+}
+
+.selected-line {
+    background: #c7c7c7;
+    width: 576px;
+    height: 1px;
+}
+
+// project
+.project-section {
+    min-height: 720px;
+    display: inline;
+    .type {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin: 53px 0 50px 0;
+    }
+}
+
+.right-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    .desc-list {
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        padding-bottom: 69px;
+    }
+    .t-left {
+        color: $black;
+        font-size: 18px;
+        li {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+        }
+        strong {
+            display: inline-block;
+            width: 280px;
+            font-size: 22px;
+        }
+    }
+    .t-right {
+        color: $black;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .description {
+        color: #545454;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    // 마우스 호버시
+    .link-list .list-item a {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .link-list .list-item .next-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .link-list .list-item:hover .next-arrow {
+        transform: translateX(5px);
+    }
+
+    .link-list {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding-top: 96px;
+        color: $black;
+        font-size: 24px;
+        font-weight: 400;
+        .next-arrow {
+            padding-left: 32px;
+        }
+    }
+}
+
+// footer
+.ft-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 130px 0 30px 0;
+    height: 300px;
+    .footer-title {
+        padding: 30px 0 0 0;
+        font-size: 14px;
+    }
+}
+
+.footer-copy {
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.floating-button {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* 이미지 크기에 맞게 조정 */
+    height: 50px; /* 이미지 크기에 맞게 조정 */
+}
+
+.svg-image {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.svg-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.floating-button:hover .svg-image {
+    opacity: 0;
+}
+
+.floating-button:hover .svg-image-hover {
+    opacity: 1;
+}

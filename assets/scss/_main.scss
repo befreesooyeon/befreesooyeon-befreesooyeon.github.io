@@ -1,0 +1,401 @@
+// home
+
+.home-section {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.home-title-container {
+    margin-left: -10px;
+}
+
+.home-title {
+    color: $black;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 80px 0px 0 10px;
+    margin: 0 auto;
+    strong {
+        display: block;
+    }
+}
+
+.home-logo {
+    position: absolute;
+    top: 138px;
+    right: -181px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotate 10s linear infinite;
+}
+
+.home-line {
+    background: #c7c7c7;
+    width: 1280px;
+    height: 1px;
+    margin: -7px 0 30px 0;
+}
+
+.about-section {
+    display: flex;
+    // justify-content: space-between;
+    margin: 80px 0;
+}
+
+.about {
+    font-size: 14px;
+    font-weight: 400;
+    top: 30px;
+    margin: 20px 42px 0 0;
+}
+
+.english-comment {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.full-end {
+    color: $secondary;
+    font-size: 14px;
+    font-weight: 400;
+    margin: auto 0 0 auto;
+    // margin: 163px 0 0 60px;
+    .more {
+        color: $secondary;
+    }
+}
+
+.index-img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+// projet 1
+.project-container-container {
+    display: flex;
+    margin: 50px auto 85px auto;
+    gap: 68px;
+}
+
+.num {
+    color: #595959;
+}
+
+// section title
+.left-wrap1 {
+    width: 631px;
+    height: 503px;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.slide-1-svg {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.section-title-1 {
+    color: #0076c0;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.section-title-2 {
+    color: $black;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.section-title-3 {
+    color: #44934e;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.slide-3-svg {
+    width: 631px;
+    height: 503px;
+    object-fit: cover;
+}
+
+.select-num {
+    font-size: 20px;
+    font-weight: 400;
+    width: 237px;
+}
+.title-name {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.selected-title {
+    color: $black;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.selected-container-container {
+    display: flex;
+    align-items: center;
+    gap: 68px;
+    margin: 50px auto 85px auto;
+}
+
+.right-portfolio {
+    display: flex;
+    align-items: center;
+}
+.portfolio-link a {
+    display: flex;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.portfolio-link .num {
+    width: 237px;
+}
+
+.portfolio-link .title-name {
+    flex-grow: 1;
+}
+
+.portfolio-link img {
+    margin-left: auto;
+}
+
+img.selected-arrow {
+    align-self: center;
+}
+
+// 오른쪽 포트폴리오 텍스트 마우스 호버 시
+.selected-item-1:hover .selected-line,
+.selected-item-2:hover .selected-line,
+.selected-item-3:hover .selected-line,
+.selected-item-4:hover .selected-line {
+    background-color: $black;
+    width: 576px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.selected-item-1,
+.selected-item-2,
+.selected-item-3,
+.selected-item-4 {
+    position: relative;
+    a {
+        color: #c7c7c7;
+        transition: color 0.3s ease;
+    }
+
+    .select-num,
+    .title-name {
+        color: #c7c7c7;
+        transition: color 0.3s ease;
+    }
+
+    .after {
+        display: none;
+    }
+
+    .before {
+        display: inline-block;
+    }
+
+    .selected-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 576px;
+        height: 1px;
+        background-color: #c7c7c7;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        a,
+        .select-num,
+        .title-name {
+            color: $black;
+        }
+
+        .after {
+            display: inline-block;
+        }
+
+        .before {
+            display: none;
+        }
+
+        .selected-line {
+            background-color: $black;
+            width: 576px;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+img[alt='arrow-'] {
+    position: relative;
+    right: -130px;
+}
+
+// about
+.logo-s {
+    width: 42px;
+    height: 42px;
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.about-me-wrap {
+    display: flex;
+    gap: 162px;
+}
+
+.left-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-photo {
+    margin-bottom: 90px; /* 이미지와 last-txt 사이의 간격 */
+}
+
+.last-txt {
+    margin-top: auto; /* 하단으로 밀어내기 */
+}
+
+.right-wrap2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+.sub {
+    color: #545454;
+    font-size: 16px;
+}
+.sub-wrapper {
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #545454;
+    .name-en {
+        padding-right: 5px;
+    }
+}
+.column {
+    padding-bottom: 25px;
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    .sub .sub-wrapper {
+        font-size: 16px;
+    }
+}
+
+.about-me-column1,
+.about-me-column2,
+.about-me-column3,
+.about-me-column4 {
+    flex-basis: calc(50% - 10px);
+}
+
+.about-me-column5 {
+    flex-basis: 100%;
+}
+
+.skill-logo {
+    padding-right: 5px;
+}
+.about-desc {
+    flex-basis: 100%;
+    align-self: flex-end;
+    margin-bottom: 0;
+    color: $black;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.last-txt {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+// 슬라이드 텍스트
+.slide-txt {
+    border-bottom: 1px solid #c7c7c7;
+    border-top: 1px solid #c7c7c7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .txt-ani-wrap {
+        display: flex;
+    }
+
+    .box {
+        animation-name: main-marquee-ani;
+        animation-iteration-count: infinite;
+        animation-duration: 30s;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        white-space: nowrap;
+        font-size: 15px;
+        font-weight: 300;
+        word-spacing: 10px;
+        padding: 19px 0;
+    }
+}
+
+@keyframes main-marquee-ani {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-80%);
+    }
+}
