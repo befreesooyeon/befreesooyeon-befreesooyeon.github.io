@@ -273,6 +273,25 @@ img[alt='arrow-'] {
     right: -130px;
 }
 
+.slide-container {
+    position: relative;
+    width: 631px;
+    height: 503px;
+    overflow: hidden;
+}
+
+.slide-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slide-active.active {
+    opacity: 1;
+}
+
 // about
 .logo-s {
     width: 42px;

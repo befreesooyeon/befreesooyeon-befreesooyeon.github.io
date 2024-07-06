@@ -69,3 +69,39 @@ scrollReveal.reveal('.nav_item', { interval: 100 })
 
 // 메일 링크
 scrollReveal.reveal('.mail-link', { delay: 1000 })
+
+// selected 슬라이드 설정
+document.addEventListener('DOMContentLoaded', function () {
+    const slide1 = document.getElementById('slide-1')
+    const slide2 = document.getElementById('slide-2')
+    const slide3 = document.getElementById('slide-3')
+    const slide4 = document.getElementById('slide-4')
+    const selectedItem1 = document.querySelector('.selected-item-1')
+    const selectedItem2 = document.querySelector('.selected-item-2')
+    const selectedItem3 = document.querySelector('.selected-item-3')
+    const selectedItem4 = document.querySelector('.selected-item-4')
+    const rightPortfolio = document.querySelector('.right-portfolio')
+
+    function showSlide(slideToShow) {
+        ;[slide1, slide2, slide3, slide4].forEach((slide) => {
+            slide.classList.remove('active')
+        })
+        slideToShow.classList.add('active')
+    }
+
+    function hideAllSlides() {
+        ;[slide1, slide2, slide3, slide4].forEach((slide) => {
+            slide.classList.remove('active')
+        })
+    }
+
+    selectedItem1.addEventListener('mouseenter', () => showSlide(slide1))
+    selectedItem2.addEventListener('mouseenter', () => showSlide(slide2))
+    selectedItem3.addEventListener('mouseenter', () => showSlide(slide3))
+    selectedItem4.addEventListener('mouseenter', () => showSlide(slide4))
+
+    rightPortfolio.addEventListener('mouseleave', hideAllSlides)
+
+    // 초기 상태: 모든 슬라이드 숨기기
+    hideAllSlides()
+})
